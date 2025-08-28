@@ -1,0 +1,44 @@
+{
+  "env": {
+    "es2021": true,
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsdoc/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "jsdoc/require-jsdoc": [
+      "warn",
+      {
+        "publicOnly": true,
+        "require": {
+          "FunctionDeclaration": true,
+          "ClassDeclaration": true,
+          "MethodDefinition": true
+        }
+      }
+    ],
+    "jsdoc/require-param": "error",
+    "jsdoc/require-returns": "error",
+    "jsdoc/require-param-type": "error",
+    "jsdoc/require-returns-type": "error",
+    "jsdoc/require-description": "error"
+  },
+  "settings": {
+    "jsdoc": {
+      "mode": "typescript"
+    }
+  }
+}
+
+// $ npm run lint -> Command that checks grammar based on rules of eslint files.
+// If this error occures, ESLint couldn't find an eslint.config.(js|mjs|cjs) file (https://eslint.org/docs/latest/use/configure/migration-guide), run the following command. It means that '.eslintrc.json' is deprecated.
+// $ npx @eslint/migrate-config .eslintrc.json -> Command that migrates from '.json' to '.js'
+
+// If this file(.eslintrc.json) is changed, run below command again.
+// $ npm run lint

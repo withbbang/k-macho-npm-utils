@@ -1,0 +1,41 @@
+{
+  "name": "k-macho-npm-utils",
+  "version": "0.0.0",
+  "description": "Utils compilation for only me",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint src --fix --ext .js,.ts",
+    "build": "env-cmd -f .env.prod vite build && tsc && tsx ./scripts/build-api.ts",
+    "build:dev": "env-cmd -f .env.dev vite build && tsc && tsx ./scripts/build-api.ts",
+    "build:prod": "env-cmd -f .env.prod vite build && tsc && tsx ./scripts/build-api.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/withbbang/k-macho-npm-utils.git"
+  },
+  "author": "K-MACHO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/withbbang/k-macho-npm-utils/issues"
+  },
+  "homepage": "https://github.com/withbbang/k-macho-npm-utils#readme",
+  "dependencies": {
+    "env-cmd": "^10.1.0"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.52.11",
+    "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "eslint": "^9.34.0",
+    "eslint-plugin-jsdoc": "^54.1.1",
+    "terser": "^5.43.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.3",
+    "vite-plugin-remove-console": "^2.2.0"
+  }
+}
