@@ -1,9 +1,11 @@
 .idea
 .DS_Store
+/scripts
+/src
 
 .env*
 
-.eslint*
+*eslint*
 
 .git*
 
