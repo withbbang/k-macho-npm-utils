@@ -1,6 +1,6 @@
 {
   "name": "k-macho-npm-utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utils compilation for only me",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
