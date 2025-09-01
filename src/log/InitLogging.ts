@@ -2,7 +2,7 @@
  * Logging the banner1
  * @public
  */
-export function InitLogging1() {
+export function initLogging1() {
   // prettier-ignore
   console.log(
     '%c██╗  ██╗     ███╗   ███╗ █████╗  ██████╗██╗  ██╗ ██████╗ \n' +
@@ -24,7 +24,7 @@ export function InitLogging1() {
  * Logging the banner2
  * @public
  */
-export function InitLogging2() {
+export function initLogging2() {
   // prettier-ignore
   console.log(
     '%c██╗   ██╗████████╗██╗██╗     ███████╗\n' +

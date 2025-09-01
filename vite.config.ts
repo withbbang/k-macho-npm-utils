@@ -18,14 +18,22 @@ export default defineConfig({
   build: {
     minify: 'terser', // 'terser' or 'esbuild'
     lib: {
-      name: pkg.name.replace(/^@.*\//, '').replace(/[^a-zA-Z0-9_$]/g, ''),
-      fileName: (format) => (format === 'es' ? 'index.esm.js' : 'index.js'),
+      name: pkg.name,
+      formats: ['es', 'cjs', 'umd'], // ESM, CJS, UMD 동시에 빌드
+      fileName: (format) => {
+        switch (format) {
+          case 'es':
+            return 'index.esm.js';
+          case 'cjs':
+            return 'index.cjs.js';
+          case 'umd':
+            return 'index.umd.js';
+          default:
+            return 'index.js';
+        }
+      },
       entry: 'src/index.ts',
-      formats: ['umd', 'es'],
     },
     sourcemap: false,
-  },
-  server: {
-    port: 5173,
   },
 });

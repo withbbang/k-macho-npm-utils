@@ -1,6 +1,6 @@
 {
   "name": "k-macho-npm-utils",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Utils compilation for only me",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -18,9 +18,9 @@
   "scripts": {
     "lint": "eslint src --fix --ext .js,.ts",
     "clean": "rimraf dist",
-    "build": "npm run lint && npm run clean && env-cmd -f .env.prod vite build && tsc && tsx ./scripts/build-api.ts",
-    "build:dev": "npm run lint && npm run clean && env-cmd -f .env.dev vite build && tsc && tsx ./scripts/build-api.ts",
-    "build:prod": "npm run lint && npm run clean && env-cmd -f .env.prod vite build && tsc && tsx ./scripts/build-api.ts",
+    "build": "npm run lint && npm run clean && env-cmd -f .env.prod vite build && tsc",
+    "build:dev": "npm run lint && npm run clean && env-cmd -f .env.dev vite build && tsc",
+    "build:prod": "npm run lint && npm run clean && env-cmd -f .env.prod vite build && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {},
